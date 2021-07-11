@@ -2,6 +2,8 @@ from django.db import models
 from blog.models import Post
 # Create your models here.
 class Comment(models.Model):
+    # def __str__(self):
+    #     return self.name
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_ITEMS = (

@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Category(models.Model):
+    def __str__(self):
+        return self.name
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_ITEMS = (
@@ -19,6 +21,8 @@ class Category(models.Model):
         verbose_name = verbose_name_plural = "分类"
 
 class Tag(models.Model):
+    def __str__(self):
+        return self.name
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_ITEMS = (
@@ -33,6 +37,8 @@ class Tag(models.Model):
         verbose_name = verbose_name_plural = "标签"
 
 class Post(models.Model):
+    def __str__(self):
+        return self.title
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_DRAFT = 2
