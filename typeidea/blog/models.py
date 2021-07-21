@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Category(models.Model):
-    def __str__(self):
+    def __str__(self):#str方法 会反悔类的描述信息  返回的是一段字符串
         return self.name
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
